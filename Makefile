@@ -12,7 +12,7 @@ OBJ=reads.o writes.o main.o
 CC=g++
 
 #Flags
-CFLAGS=-Wall -pedantic -Wno-long-long -O0
+CFLAGS=-std=c++11 -Wall -pedantic -Wno-long-long -O0
 
 #compilation
 
@@ -27,7 +27,7 @@ writes.o: writes.cpp
 reads.o: reads.cpp 
 	$(CC) $(CFLAGS) -c reads.cpp 
 main.o: main.cpp 
-	$(CC) $(CFLAGS) -c src/main.cpp
+	$(CC) $(CFLAGS) -c main.cpp
 
 clean:
 	rm *.o
@@ -37,5 +37,4 @@ install: $(executable)
 	cp $(executable) /usr/bin
 
 uninstall:
-  rm /usr/bin/$(executable)
-
+	rm /usr/bin/$(executable)

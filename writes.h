@@ -1,5 +1,6 @@
 #ifndef __WRITES__
 #define __WRITES__
+#include <cstdio>
 void writeMachineType(IMAGE_FILE_HEADER ntheader);
 void writeLinkTime(IMAGE_FILE_HEADER ntheader);
 void writeFileHeader(IMAGE_FILE_HEADER ntheader);
